@@ -21,22 +21,22 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
-    "cookie-parser": "^1.4.4",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
-    "cross-env": "^6.0.3",
+    "cross-env": "7.0.3",
     "express": "^4.17.1",
-    "express-validation": "^1.0.3",
-    "express-winston": "^4.0.2",
-    "helmet": "^3.21.2",
-    "http-status": "^1.4.2",
-    "joi": "^14.3.1",
-    "method-override": "^3.0.0",
-    "mongoose": "^5.8.3",
-    "morgan": "^1.9.1",
-    "pm2": "^4.2.1",
-    "winston": "^3.2.1"
+    "express-validation": "3.0.8",
+    "express-winston": "^4.2.0",
+    "helmet": "4.6.0",
+    "http-status": "1.5.0",
+    "joi": "17.4.2",
+    "method-override": "3.0.0",
+    "mongoose": "6.0.5",
+    "morgan": "1.10.0",
+    "pm2": "5.1.1",
+    "winston": "3.3.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "2.0.12"
   }
 }
