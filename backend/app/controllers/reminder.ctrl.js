@@ -1,15 +1,16 @@
-const Postit = require('../models/postit')
+const Postit = require('../models/postit');
 
-exports.findAllReminders = (req, res, next) => {
-    const data = Postit.find({});
+exports.findAllReminders = async (req, res, next) => {
+    const data = await Postit.find({});
     res.json(data)
 };
 
-exports.createReminder = (req, res, next) => {
-    const data = Postit.create(req.body);
+exports.createReminder = async (req, res, next) => {
+    const data = await Postit.create(req.body);
     res.json(data)
 }
 
-exports.deteleReminder = (req, res, next) => {
-    console.log("Deleting")
+exports.deteleReminder = async (req, res, next) => {
+    const data = await Postit.deleteOne(req.body);
+    res.send(data);
 }

@@ -7,11 +7,23 @@ const UserSchema = new Schema({
     firstName: {
         type: String,
         trim: true,
-        validate: [validateLocalStrategyProperty, 'Please fill in your first name']
     },
+
+    lastName: {
+        type: String
+    },
+
+    email: {
+        type: String
+    },
+    
+    reminders: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Postit'
+    }]
 });
 
-const validateLocalStrategyProperty = function(property) {
+const validateLocalStrategyProperty = function (property) {
     return ((this.provider !== 'local' && !this.updated) || property.length);
 };
 
