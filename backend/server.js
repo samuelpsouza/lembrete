@@ -27,7 +27,7 @@ app.use(methodOverride());
 app.use(helmet());
 app.use(cors());
 
-const appRoutes = require("./app/routes/app-routes");
+const appRoutes = require("./app/routes/app.routes");
 appRoutes(app);
 
 if (config.development) {
