@@ -1,7 +1,7 @@
 const express = require("express");
 
-const lembreteRoutes = require("../routes/lembrete");
+const reminderRoutes = require("./reminder");
 
 module.exports = (app) => {
-    app.use('/lembretes', lembreteRoutes);
+    app.use('/reminders', reminderRoutes);
 }
