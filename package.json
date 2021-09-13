@@ -4,8 +4,8 @@
   "description": "Projeto que fixa lembretes na tela.",
   "main": "server.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production pm2 start ./backend/bin/www --name lembrete",
-    "start-dev": "cross-env NODE_ENV=development DEBUG=express-sequelize nodemon ./backend/bin/www",
+    "start": "cross-env NODE_ENV=production pm2 start server.js --name lembrete",
+    "start-dev": "cross-env NODE_ENV=development DEBUG=express-sequelize nodemon server.js",
     "test": "npm run test-unit"
   },
   "repository": {

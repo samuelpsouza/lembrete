@@ -10,7 +10,7 @@ const httpStatus = require('http-status');
 const expressWinston = require('express-winston');
 const winstonInstance = require('./config/winston');
 const expressValidation = require('express-validation');
-const APIError = require('./helpers/APIError');
+const APIError = require('./app/helpers/APIError');
 const config = require('./config/config');
 
 var app = express();
@@ -19,6 +19,7 @@ if (app.get('env') === 'development') {
 	app.use(logger('dev'));
 }
 
+app.use(express.static(__dirname + '/public')); 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
@@ -72,5 +73,5 @@ app.use((err, req, res, next) => {
   });
 });
 
-
-module.exports = app;
+app.listen(3000);
+console.log("App listening on port 3000");
