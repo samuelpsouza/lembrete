@@ -1,7 +1,7 @@
 <div>
-    <form>
-        <input type="text" name="username" placeholder="Username" />
-        <input type="password" name="password" placeholder="Password" />
-        <button type="submit">Login</button>
+    <form name="loginForm">
+        <input type="text" ng-model="credentials.username" name="username" placeholder="Username" />
+        <input type="password" ng-model="credentials.password" name="password" placeholder="Password" />
+        <button type="submit" ng-click="login(credentials)" ng-disabled="!credentials.username && !credentials.password">Login</button>
     </form>
 </div>

@@ -2,7 +2,8 @@
 
 angular.module('lembreteApp', [
     'ngRoute',
-    'lembreteApp.loginView'
+    'lembreteApp.loginView',
+    'lembreteApp.stickyNoteView'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider){
     $locationProvider.hashPrefix('!');
