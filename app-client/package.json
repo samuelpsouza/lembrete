@@ -4,7 +4,9 @@
   "description": "Projeto que fixa lembretes na tela.",
   "main": "server.js",
   "scripts": {
-    "start": "http-server -a localhost -p 8000 -c-1 ./app"
+    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+    "test": "karma start karma.conf.js",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,10 @@
   },
   "devDependencies": {
     "http-server": "^14.0.0",
-    "karma": "^6.3.8"
+    "jasmine-core": "^3.10.1",
+    "karma": "^6.3.8",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "protractor": "^7.0.0"
   }
 }

@@ -1,11 +1,11 @@
 'use strict';
 
 describe('lembreteApp.login module', function() {
-    beforeEach(module('lembreteApp.login'));
+    beforeEach(module('lembreteApp.loginView'));
 
     describe('loginView controller', function(){
         it('should ...', inject(function($controller){
-            let loginViewCtrl = $controller('LoginCtrl');
+            let loginViewCtrl = $controller('LoginViewCtrl');
             expect(loginViewCtrl).toBeDefined();
         }));
     });
