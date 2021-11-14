@@ -10,7 +10,7 @@ const httpStatus = require('http-status');
 const expressWinston = require('express-winston');
 const winstonInstance = require('./config/winston');
 const expressValidation = require('express-validation');
-const APIError = require('./app/helpers/APIError');
+const APIError = require('./helpers/APIError');
 const config = require('./config/config');
 
 var app = express();
@@ -28,7 +28,7 @@ app.use(methodOverride());
 app.use(helmet());
 app.use(cors());
 
-const appRoutes = require("./app/routes/app.routes");
+const appRoutes = require("./routes/app.routes");
 appRoutes(app);
 
 if (config.development) {

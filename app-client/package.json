@@ -1,0 +1,29 @@
+{
+  "name": "lembrete",
+  "version": "3.0.0",
+  "description": "Projeto que fixa lembretes na tela.",
+  "main": "server.js",
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelpsouza/Lembrete.git"
+  },
+  "author": "Samuel Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samuelpsouza/Lembrete/issues"
+  },
+  "homepage": "https://github.com/samuelpsouza/Lembrete#readme",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "angular-loader": "^1.8.2",
+    "angular-route": "^1.8.2",
+    "html5-boilerplate": "^8.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0",
+    "karma": "^6.3.8"
+  }
+}
