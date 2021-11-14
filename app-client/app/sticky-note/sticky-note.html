@@ -1,8 +1,22 @@
 <div class="sticky-notes">
-    <ul ng-repeat="(key, stickyNote) in stickyNotes">
-        <li>
-            <h3>#{{key}} {{stickyNote.title}}</h3>
-            <p>{{stickyNote.content}}</p>
-        </li>
-    </ul>
+    <div class="row align-items-start">
+        <ul class="col" ng-repeat="(key, stickyNote) in stickyNotes">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{stickyNote.title}} #{{key + 1}}</h5>
+                    <p class="card-text">{{stickyNote.content}}</p>
+                    <a href="#" class="card-link">remove</a>
+                </div>
+            </div>
+        </ul>
+        <ul class="col">
+            <div class="card border-light bg-light mb-3" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">New sticky note</h5>
+                    <p class="card-text">Type here</p>
+                    <a href="#" class="card-link">save</a>
+                </div>
+            </div>
+        </ul>
+    </div>
 </div>
