@@ -1,5 +1,8 @@
-<div>
-    <div ng-repeat="(key, value) in lembretes">
-        {{value.msg}}
-    </div>
+<div class="sticky-notes">
+    <ul ng-repeat="(key, stickyNote) in stickyNotes">
+        <li>
+            <h3>#{{key}} {{stickyNote.title}}</h3>
+            <p>{{stickyNote.content}}</p>
+        </li>
+    </ul>
 </div>

@@ -1,0 +1,20 @@
+body {
+    margin: 20px 20px auto;
+    background:#666;
+}
+
+.sticky-notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul {
+    color: #222222;
+    background: white;
+    max-width: 20%;
+}
+
+ul, li {
+    list-style: none;
+}
