@@ -16,15 +16,15 @@ const UserSchema = new Schema({
     email: {
         type: String
     },
-    
+
+    password: {
+        type: String
+    },
+
     reminders: [{
         type: Schema.Types.ObjectId,
-        ref: 'Postit'
+        ref: 'StickyNote'
     }]
 });
-
-const validateLocalStrategyProperty = function (property) {
-    return ((this.provider !== 'local' && !this.updated) || property.length);
-};
 
 module.exports = mongoose.model('User', UserSchema);
