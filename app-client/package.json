@@ -1,5 +1,5 @@
 {
-  "name": "lembrete",
+  "name": "reminder-client-app",
   "version": "3.0.0",
   "description": "Projeto que fixa lembretes na tela.",
   "main": "server.js",

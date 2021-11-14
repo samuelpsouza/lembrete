@@ -3,16 +3,16 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const PostitSchema = new Schema({
+const StickyNoteSchema = new Schema({
 	title: {
 		type: String,
 		required: true
 	},
-    text: {
+    content: {
 		type: String,
 		max: 140,
 		required: true
     }
 });
 
-mongoose.model('Postit', PostitSchema);
+mongoose.model('StickyNote', StickyNoteSchema);

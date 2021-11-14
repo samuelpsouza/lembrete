@@ -1,16 +1,16 @@
-const Postit = require('../models/postit');
+const StickyNote = require('../models/sticky-note');
 
 exports.findAllReminders = async (req, res, next) => {
-    const data = await Postit.find({});
+    const data = await StickyNote.find({});
     res.json(data)
 };
 
 exports.createReminder = async (req, res, next) => {
-    const data = await Postit.create(req.body);
+    const data = await StickyNote.create(req.body);
     res.json(data)
 }
 
 exports.deteleReminder = async (req, res, next) => {
-    const data = await Postit.deleteOne(req.body);
+    const data = await StickyNote.deleteOne(req.body);
     res.send(data);
 }
