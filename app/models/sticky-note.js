@@ -15,4 +15,4 @@ const StickyNoteSchema = new Schema({
     }
 });
 
-mongoose.model('StickyNote', StickyNoteSchema);
+module.exports = mongoose.model('StickyNote', StickyNoteSchema);

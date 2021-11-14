@@ -27,4 +27,4 @@ const validateLocalStrategyProperty = function (property) {
     return ((this.provider !== 'local' && !this.updated) || property.length);
 };
 
-mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
