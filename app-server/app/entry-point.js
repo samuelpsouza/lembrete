@@ -8,7 +8,7 @@ setTimeout(function () {
     mongoose.connect("mongodb://localhost:27017/postits");
 }, 6000);
 
-// app.use(express.json);
+app.use(express.json());
 // app.use(express.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
@@ -16,6 +16,10 @@ app.get("/", (req, res) => {
 });
 
 const UserController = require("./controllers/user.ctrl");
+
+app.get("/users", (req, res, next) => {
+    UserController.listAllUsers(req, res, next);
+});
 
 app.post("/users", (req, res, next) => {
     UserController.registerUser(req, res, next);

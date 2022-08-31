@@ -21,7 +21,7 @@ const UserSchema = new Schema({
         type: String
     },
     
-    reminders: [{
+    postits: [{
         type: Schema.Types.ObjectId,
         ref: 'PostIt'
     }]
