@@ -1,10 +1,7 @@
 const User = require("../models/user");
 
 exports.registerUser = (req, res, next) => {
-    const data = User.create(req.bool);
-    res.json(data);
+    new User(req.body)
+        .save()
+        .then(user => res.json(`User ${user.id} created successfully`));
 }
-
-exports.findAllUsers = (req, res, next) => {
-    res.json({})
-};
