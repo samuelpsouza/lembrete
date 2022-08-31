@@ -1,4 +1,4 @@
-node_modules
-client/public/angular
-client/public/bootstrap
+**/node_modules
+**/**/libs
 .env
+.idea

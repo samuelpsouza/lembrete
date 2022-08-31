@@ -1,0 +1,26 @@
+version: '3'
+services:
+  lembrete:
+    build: ..
+    ports:
+    - "8080:80"
+    environment: 
+      - DEV_DB_USERNAME
+      - DEV_DB_PASSWORD
+      - DEV_DB_HOSTNAME
+    networks: 
+      - lembrete
+    depends_on: 
+      - db
+  db:
+    image: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+    networks: 
+      - lembrete
+    ports:
+      - "27017:27017"
+networks: 
+  lembrete:

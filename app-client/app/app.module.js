@@ -1,0 +1,1 @@
+angular.module("postItApp", ["postit.controller", "postit.service", "auth.controller"]);

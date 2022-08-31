@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="postItApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="libs/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="core/postit.controller.js"></script>
+    <script src="core/postit.service.js"></script>
+    <script src="core/auth.controller.js"></script>
+</head>
+<body ng-controller="postItController">
+<header>
+    <nav>
+        <ul>
+            <li> Olá {{user.username}}</li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>My PostIts</h1>
+
+    <div class="container">
+        <div class="box" ng-repeat="(id, value) in postits">
+            <h3>{{value.title}}</h3>
+            <p>
+                {{value.content}}
+            </p>
+            <button type="submit" ng-click="deletePostIt(value.id)">Delete</button>
+            <button type="submit" ng-click="editPostIt(value.id)">Edit</button>
+        </div>
+
+        <div class="box">
+            <form>
+                <input type="text" placeholder="Title" ng-model="postIt.title">
+                <textarea placeholder="Write something" ng-model="postIt.content"></textarea><br/>
+                <input type="submit" ng-click="createPostIt(postIt)" value="Add" />
+                <input type="button" value="Clear"/>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer>
+
+</footer>
+</body>
+</html>
