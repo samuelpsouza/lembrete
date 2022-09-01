@@ -8,11 +8,11 @@ const PostItSchema = new Schema({
 		type: String,
 		required: true
 	},
-    text: {
+    content: {
 		type: String,
 		max: 140,
 		required: true
     }
 });
 
-mongoose.model('PostIt', PostItSchema);
+module.exports = mongoose.model('PostIt', PostItSchema);
