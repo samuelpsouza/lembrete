@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./app/entry-pont.js",
     "start-dev": "nodemon ./app/entry-pont.js localhost 8000",
-    "lint": "eslint app"
+    "lint": "eslint app",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,10 @@
     "mongoose": "^6.5.4"
   },
   "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
     "eslint": "^8.23.0",
+    "mocha": "^10.0.0",
     "nodemon": "^2.0.19"
   }
 }

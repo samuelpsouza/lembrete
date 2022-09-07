@@ -1,31 +1,23 @@
-angular.module('postit.controller', [])
-    .controller('postItController', function ($scope, $http, $window, PostIt) {
+angular.module('postit.controller', ['postit.service'])
+    .controller('postItController', function ($scope, PostItService) {
         $scope.user = {
             username: "Samuel"
         }
 
-        $scope.postits = [
-            {
-                id: 1,
-                title: "Hello World",
-                content: "Refactoring first AngularJs App"
-            },
-            {
-                id: 2,
-                title: "Hello",
-                content: "Another note"
-            },
-            {
-                id: 3,
-                title: "Hi",
-                content: "Sticky notes"
-            }
-        ];
+        PostItService.get()
+            .then(res => $scope.postits = res)
+            .catch($scope.postits = []);
 
         $scope.createPostIt = function (postIt) {
-            postIt.id = $scope.postits.length + 1;
-            $scope.postits.push(postIt);
-            $scope.postIt = {}
+            PostItService.create(postIt)
+                .then(res => {
+                    $scope.postIt = {};
+                    $scope.postits.push(res)
+                })
+                .catch(err => {
+                    $scope.postIt = {};
+                    console.error(err);
+                });
         };
 
         $scope.editPostIt = function (id) {

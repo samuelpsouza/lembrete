@@ -1,7 +1,7 @@
 const baseUrl = "/api/postits";
 
 angular.module('postit.service', [])
-    .factory('PostIt', function ($http) {
+    .factory('PostItService', function ($http) {
             return {
                 get: function () {
                     return $http.get(baseUrl);
